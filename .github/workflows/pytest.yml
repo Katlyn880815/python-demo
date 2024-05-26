@@ -1,15 +1,15 @@
 name: pytest
-on: workflow_dispatch #由手動觸發
+on: workflow_dispatch
 
 jobs:
   pytest:
     runs-on: ubuntu-latest
     steps:
-      - name: clone repository from GitHub #先把本專案從github上clone下來
+      - name: clone repository from GitHub
         run: |
           git clone https://github.com/Katlyn880815/python-demo.git
           cd github-actions-python 
-      - name: install pytest #安裝pytest
+      - name: install pytest
         run: pip install pytest
-      -name: run pytest
+      - name: run pytest
        run: pytest
