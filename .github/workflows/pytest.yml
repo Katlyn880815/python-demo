@@ -5,10 +5,8 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
     steps:
-      - name: clone repository from GitHub
-        run: |
-          git clone https://github.com/Katlyn880815/python-demo.git
-          cd python-demo
+      - name: checkout code
+        uses: actions/checkout@v3
       - name: install pytest
         run: pip install pytest
       - name: run pytest
